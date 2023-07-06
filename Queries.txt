@@ -1,0 +1,22 @@
+=============== for range in "carat" ==================
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match_all": {}
+        }
+      ],
+      "filter":{
+          "range":{
+              "carat":{
+                  "gte":"2.01"
+              }
+          }
+      }
+    }
+  },
+  "_source": {
+      "includes":["carat"]
+  }
+}
